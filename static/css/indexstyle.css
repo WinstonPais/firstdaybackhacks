@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+#sky {
+  animation: skycolor;
+  animation-direction: alternate-reverse;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+@keyframes skycolor {
+  0%   { background-color: #D4DDE6; }
+  10%  { background-color: #95B3D2; }
+  20%  { background-color: #419FEE; }
+  30%  { background-color: #4E85D3; }
+  40%  { background-color: #2259B9; }
+  50%  { background-color: #385fa3; }
+  60%  { background-color: #2b497d; }
+  70%  { background-color: #1e3357; }
+  80%  { background-color: #111d31; }
+  90%  { background-color: #030241; }
+  100% { background-color: #010123; }
+}
+
+.cloud,
+.cloud:before,
+.cloud:after {
+  animation: cloudcolor;
+  animation-direction: alternate;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+
+.cloud {
+  border-radius: 2em;
+  height: 30px;
+  width: 100px;
+}
+
+@keyframes cloudcolor {
+  0%   { background-color: #D4DDE6; }
+  100% { background-color: #95B3D2; }
+}
+
+.cloud:before,
+.cloud:after {
+  content: '';
+  border-radius: 50%;
+}
+
+.cloud:before {
+  height: 40px;
+  width: 40px;
+  left: 1em;
+  bottom: .5em;
+}
+
+.cloud:after {
+  height: 50px;
+  width: 50px;
+  right: 1em;
+  bottom: .4em;
+}
+
+#plane:after,
+#plane:before {
+  position: absolute;
+  font-size: 200px;
+}
+
+#plane:after {
+  color: #eceff1;
+  content: '✈';
+  text-shadow: 4px 1px 0 #01579b;
+  transition-property: 'transform';
+}
+
+#plane:before {
+  content: '✈';
+  color: #c51162;
+  left: -3px;
+  text-shadow: -5px 1px 0px #0091ea;
+}

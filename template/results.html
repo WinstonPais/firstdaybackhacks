@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Results!</title>
+  </head>
+  <body style="background-color:#434544;">
+    <nav class="navbar navbar-dark bg-dark" style="margin-bottom:1em">
+      <a class="navbar-brand" href="#">Back</a>
+    </nav>
+    <div class="container" >
+        <div class="row">
+          <div class="col-md-6">
+            <iframe
+              width="100%"
+              height="450"
+              frameborder="0" style="border:0;box-shadow: 0 0 5rem rgba(0, 0, 0);"
+
+              src="https://www.google.com/maps/embed/v1/directions?key={{API_KEY}}&origin=moscow+airport&destination=laguardia+airport&maptype=satellite" allowfullscreen>
+            </iframe>
+          </div>
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-6" style="color:white;background-color:#4b4d4c;box-shadow: 0 0 5rem rgba(0, 0, 0);height:450px;">
+                <h1 style="margin-bottom:1em;">Flight Details</h1>
+                <p>Cheapest Available Flight details</p>
+                <div class="" style="margin-top:1em;">
+                  <p style="text-align:center;">From {{ org }} to {{ dest }}</p>
+                  <ul>
+                    <li>Price: ${{ price }}</li>
+                    <li>Airline: {{ airline }}</li>
+                    <li>Flight Number: {{ flight_number }}</li>
+                    <li>Departure At: {{ departure_at }}</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6" style="color:white;background-color:#4b4d4c;box-shadow: 0 0 5rem rgba(0, 0, 0);height:450px;">
+                <h1 style="margin-bottom:1em;">Covid Cases</h1>
+                <p>covid cases for your destination</p>
+                <div class="" style="margin-top:1em;">
+                  <ul>
+                    <li>Infected: {{ infected }}</li>
+                    <li>Tested: {{ tested }}</li>
+                    <li>Recovered: {{ recovered }}</li>
+                    <li>Deceased: {{ deceased }}</li>
+                    <li>Source Url: <a href="{{ sourceUrl }}">Link</a></li>
+                    <li>Last Updated On: {{ lastUpdated }}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div style="width:100%;text-align:center;margin-top:3em;margin-bottom:3em;">
+          <button type="button" style="margin:auto;width:80%;" align=center class="btn {{ classname }}" disabled>{{ BtnText }}</button>
+        </div>
+        <div class="row" style="margin-bottom:5em;">
+          <iframe
+            width="50%"
+            height="450"
+            frameborder="0" style="border:0;box-shadow: 0 0 5rem rgba(0, 0, 0);"
+
+            src="https://www.google.com/maps/embed/v1/search?key={{API_KEY}}&q=intresting+places+in+newyork&maptype=satellite" allowfullscreen>
+          </iframe>
+          <iframe
+            width="50%"
+            height="450"
+            frameborder="0" style="border:0;box-shadow: 0 0 5rem rgba(0, 0, 0);"
+
+            src="https://www.google.com/maps/embed/v1/streetview?key={{API_KEY}}&location=40.748817,-73.985428&heading=210&pitch=10&fov=35" allowfullscreen>
+          </iframe>
+        </div>
+
+
+    </div>
+  </body>
+</html>
