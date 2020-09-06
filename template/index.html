@@ -4,22 +4,28 @@
   <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <meta charset="utf-8">
+    <!-- <link rel="stylesheet" href="{% static "css/input.css" %}"> -->
     <link rel="stylesheet" href="{% static "css/indexstyle.css" %}">
     <title>Welcome!</title>
   </head>
-  <body style="background-color: #245ab7">
-    <div  id="sky">
-      <div id="plane"></div>
-      <div class="" style="color:white;text-align:center">
-        <h1>Welcome</h1>
-        <h2>AppName</h2>
-        <a href="{% url 'mainapp:input' %}"> <button type="button"  class="btn-lg btn btn-primary">Start</button></a>
-      </div>
+  <body  style="background-color: #245ab7">
+    <!-- <div id="particles-js"> -->
+      <div  id="sky">
+        <div id="plane"></div>
+        <div class="" style="color:white;text-align:center">
+          <h1>Welcome to</h1>
+          <h2>FlyCorona</h2>
+          <a href="{% url 'mainapp:input' %}"> <button type="button"  class="btn-lg btn btn-primary">Start</button></a>
+        </div>
 
-    </div>
+      </div>
+    <!-- </div> -->
+
 
     <!-- Scripts -->
     <script type="text/javascript" src="{% static "js/index.js" %}"></script>
-    <script src="https://js.radar.io/v3/radar.min.js"></script>
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script type="text/javascript" src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+    <script type="text/javascript" src="{% static "js/input.js" %}"></script> -->
   </body>
 </html>
