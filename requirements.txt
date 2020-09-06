@@ -16,7 +16,6 @@ pyOpenSSL==19.1.0
 PySocks==1.7.1
 pytz==2020.1
 requests==2.24.0
-setuptools==49.6.0.post20200814
 six==1.15.0
 sqlparse==0.3.1
 urllib3==1.25.10
